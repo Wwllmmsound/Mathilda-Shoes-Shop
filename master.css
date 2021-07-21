@@ -1,0 +1,62 @@
+body{
+  background-image: url(Fond-du-site.jpg);
+}
+.titre{
+  margin: 0 15% 0 25%;
+  text-align: center;
+}
+.titre-panier{
+  text-align: center;
+}
+.container-main{
+  display: flex;
+}
+.menu{
+  height: 750px;
+  width: 400px;
+  padding-top: 150px;
+  margin: 50px;
+  align-content: center;
+  background-image: url(Menu-sans-txt.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  opacity: 0.8;
+}
+
+.menuTitre{
+  display: block;
+  margin: 10px 50px 10px 70px;
+}
+
+.hidden{
+  display: none;
+}
+.hidden:hover{
+  display: block;
+}
+
+.menuTitre:hover {
+  font-weight: bold();
+  background-color: #ffff33;
+}
+.article{
+  border: solid #f2adc3 8px;
+  border-radius: 70px;
+  width: 350px;
+  height: 500px;
+  padding: 20px;
+}
+a{
+  display: block;
+  margin: 50px 0 0 75px;
+}
+button{
+  text-align: center;
+  height: 50px;
+  width: 100px;
+  border: none;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
