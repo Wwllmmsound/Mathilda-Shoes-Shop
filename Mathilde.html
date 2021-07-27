@@ -2,41 +2,55 @@
 <html lang="en" dir="ltr">
   <head>
     <link rel="stylesheet" href="master.css">
+
+    <script type="text/javascript">
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (var i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function(){
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block")
+             {dropdownContent.style.display = "none";
+        } else {
+        dropdownContent.style.display = "block";
+        }
+      });
+    }
+    </script>
+
     <title>Mathilda corp</title>
   </head>
   <body>
-  <div class="container-main">
-    <nav class="menu">
-      <li>
-        <ul><p style="font-weight:bold"  class="menuTitre">Shop</p></ul>
-          <li class="hidden">
-            <ul><a href="shop.html" >Itchi</a></ul>
-            <ul><a href="shop.html" >Ni</a></ul>
-            <ul><a href="shop.html" >San</a></ul>
-          </li>
-        <ul><p style="font-weight:bold"  class="menuTitre">Collection</p></ul>
-          <li class="hidden">
-            <ul><a href="collection.html"a>Youn</a></ul>
-            <ul><a href="collection.html">Go</a></ul>
-            <ul><a href="collection.html">Roku</a></ul>
-          </li>
-        <ul><p style="font-weight:bold"  class="menuTitre">About</p></ul>
-          <li class="hidden">
-            <ul><a href="about.html">Nana</a></ul>
-          </li>
-        <ul><p style="font-weight:bold"  class="menuTitre">My Account</p></ul>
-          <li class="hidden">
-            <ul><a href="myaccount.html">Nana</a></ul>
-          </li>
-        <ul><a href="#" style="font-weight:bold"  class="menuTitre">Let's Play Doll</a></ul>
-      </li>
-    </nav>
-    <div class="article">
-      <img src="Botte-1.png" width="auto" height="450px "alt="botte1">
+  <div class="sidemenu">
+    <a href="Mathilde.html">Main window</a>
+    <button type="button" name="shop" class="dropdown-btn">Shop
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="shop.html" >Itchi</a>
+      <a href="shop.html" >Ni</a>
+      <a href="shop.html" >San</a>
     </div>
+    <button type="button" name="shop" class="dropdown-btn">Collection
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-container">
+      <a href="collection.html" >Youn</a>
+      <a href="collection.html" >Go</a>
+      <a href="collection.html" >Roku</a>
+      <a href="collection.html">Nana</a>
+    </div>
+    <a href="myaccount.html">About</a>
+    <a href="#" style="font-weight:bold">Let's Play Doll</a>
   </div>
 
-<button type="button" name="panier" onclick="window.location.href = 'panier.html';">Panier en 3D</button>
+  <div class="article">
+    <img src="Botte-1.png" width="auto" height="450px "alt="botte1">
+  </div>
+
+<button type="button" name="panier" onclick="window.location.href = 'panier.html';" class="panier">Panier en 3D</button>
 
   </body>
 </html>
