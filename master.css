@@ -11,35 +11,57 @@ body{
 .container-main{
   display: flex;
 }
-.menu{
+.sidemenu{
   height: 750px;
   width: 400px;
-  padding-top: 150px;
-  margin: 50px;
+  padding-left: 80px;
+  padding-top: 140px;
+  margin: 50px 10px 40px 20px;
   align-content: center;
+  text-align: center;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
   background-image: url(Menu-sans-txt.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: 90%;
   opacity: 0.8;
 }
 
-.menuTitre{
+.sidemenu a, .dropdown-btn{
+  padding: 6px 8px 6px 16px;
+  font-size: 20px;
+  color: #99003d;
   display: block;
-  margin: 10px 50px 10px 70px;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
 }
 
-.hidden{
+.sidemenu a:hover, .dropdown-btn{
+ color: #e31ca7;
+}
+
+.active {
+  background-color: #440832;
+  color: #fce8f6;
+}
+
+.dropdown-countainer {
   display: none;
-}
-.hidden:hover{
-  display: block;
+  background-color: #2d0621;
 }
 
-.menuTitre:hover {
-  font-weight: bold();
-  background-color: #ffff33;
+.fa-caret-down{
+  float:right;
+  padding-right: 8px;
 }
+
 .article{
   border: solid #f2adc3 8px;
   border-radius: 70px;
@@ -47,11 +69,8 @@ body{
   height: 500px;
   padding: 20px;
 }
-a{
-  display: block;
-  margin: 50px 0 0 75px;
-}
-button{
+
+.panier{
   text-align: center;
   height: 50px;
   width: 100px;
