@@ -1,5 +1,8 @@
 body{
   background-image: url(Fond-du-site.jpg);
+  font-family: DejaVu Sans Mono, monospace;
+  cursor: url(cursor/normal.ani), auto;
+  z-index: 0;
 }
 .titre{
   margin: 0 15% 0 25%;
@@ -8,28 +11,26 @@ body{
 .titre-panier{
   text-align: center;
 }
-.container-main{
-  display: flex;
-}
 .sidemenu{
-  height: 750px;
-  width: 400px;
-  padding-left: 80px;
-  padding-top: 140px;
-  margin: 50px 10px 40px 20px;
+  display: flex;
+  flex-direction: column;
+  height: 910px;
+  width: 380px;
+  padding-left: 60px;
+  padding-top: 100px;
+  padding-right: 67px;
+  margin: 0 0 40px 20px;
   align-content: center;
   text-align: center;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  overflow-x: hidden;
+  z-index: 2;
+  overflow-x: visible;
+  overflow-y: visible;
   background-image: url(Menu-sans-txt.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 90%;
   opacity: 0.8;
 }
-
 .sidemenu a, .dropdown-btn{
   padding: 6px 8px 6px 16px;
   font-size: 20px;
@@ -42,7 +43,14 @@ body{
   cursor: pointer;
   outline: none;
 }
-
+.sidemenu img{
+  height: 20px;
+  width: 20px;
+}
+.mainPageMenu a{
+  color: rgba(0, 0, 0, 0);
+  filter: opacity(0);
+}
 .sidemenu a:hover, .dropdown-btn{
  color: #e31ca7;
 }
@@ -50,32 +58,80 @@ body{
 .active {
   background-color: #440832;
   color: #fce8f6;
+  border-radius: 10px 10px 0 0;
 }
-
+.leMenu{
+  position: relative;
+  top: 30px;
+  left: 30px;
+  margin-right: 65px;
+}
 .dropdown-countainer {
   display: none;
   background-color: #2d0621;
 }
-
+.dropdown-container a{
+  position: relative;
+  left: 30px;
+}
 .fa-caret-down{
   float:right;
-  padding-right: 8px;
+  padding-right: 140px;
 }
 
 .article{
-  border: solid #f2adc3 8px;
-  border-radius: 70px;
+  display: flex;
+  position: absolute;
+  top: 100px;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 40%;
+}
+.botte1:hover, .botte2:hover{
+  background-color: rgba(255, 51, 204, 0.5);
+}
+.botte1{
   width: 350px;
   height: 500px;
   padding: 20px;
+  margin-right: 300px;
+  border-radius: 70px 5px 70px 5px;
+  cursor: pointer;
+  z-index: 1;
 }
-
+.botte2{
+  width: 350px;
+  height: 500px;
+  padding: 20px;
+  padding-right: 60px;
+  margin-left: 100px;
+  border-radius: 5px 70px 5px 70px;
+  cursor: pointer;
+  z-index: 1;
+}
+.popupbotte1{
+  position: absolute;
+  z-index: 3;
+  top: 100px;
+  right: 200px;
+}
+/*.popupbotte1::after{
+  content: "";
+  position: absolute;
+} */
+.popupbotte1 .show{
+  visibility: visible;
+}
 .panier{
   text-align: center;
-  height: 50px;
-  width: 100px;
+  height: 80px;
+  width: 120px;
   border: none;
-  position: absolute;
+  position: fixed;
   top: 5px;
   right: 5px;
+  background-image: url(basket.gif);
+  background-position: center;
+  background-size: 90%;
+  border-radius: 30px;
 }
