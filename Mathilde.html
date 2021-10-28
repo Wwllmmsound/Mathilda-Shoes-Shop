@@ -1,56 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <link rel="stylesheet" href="master.css">
-
-    <script type="text/javascript">
-    var dropdown = document.getElementsByClassName("dropdown-btn");
-    var i;
-
-    for (var i = 0; i < dropdown.length; i++) {
-      dropdown[i].addEventListener("click", function(){
-        this.classList.toggle("active");
-        var dropdownContent = this.nextElementSibling;
-        if (dropdownContent.style.display === "block")
-             {dropdownContent.style.display = "none";
-        } else {
-        dropdownContent.style.display = "block";
-        }
-      });
-    }
-    </script>
-
-    <title>Mathilda corp</title>
+    <link rel="stylesheet" href="master.css" href="javascipt.js">
+    <title>♡ About Mathilda ♡</title>
+        <meta  charset="utf-8">
   </head>
   <body>
   <div class="sidemenu">
-    <a href="Mathilde.html">Main window</a>
-    <button type="button" name="shop" class="dropdown-btn">Shop
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-container">
-      <a href="shop.html" >Itchi</a>
-      <a href="shop.html" >Ni</a>
-      <a href="shop.html" >San</a>
+    <div class="mainPageMenu">
+      <a href="Mathilde.html">Main window</a>
     </div>
-    <button type="button" name="shop" class="dropdown-btn">Collection
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-container">
-      <a href="collection.html" >Youn</a>
-      <a href="collection.html" >Go</a>
-      <a href="collection.html" >Roku</a>
-      <a href="collection.html">Nana</a>
+      <div class="leMenu">
+        <button class="dropdown-btn"><img src="PLUS.png" alt="plus sign">Shop
+          <i class="fa fa-caret-down"><small> 💞</small></i>
+        </button>
+      <div class="dropdown-container">
+        <a href="highBoots.html"><img src="MOINS.png" alt="minus sign">High Boots</a>
+        <a href="loafers.html"><img src="MOINS.png" alt="minus sign">Loafers</a>
+      </div>
+        <button class="dropdown-btn"><img src="PLUS.png" alt="plus sign">Collection
+          <i class="fa fa-caret-down"><small> 💞</small></i>
+        </button>
+      <div class="dropdown-container">
+        <a href="collection.html"><img src="MOINS.png" alt="minus sign">Youn</a>
+        <a href="collection.html"><img src="MOINS.png" alt="minus sign">Go</a>
+        <a href="collection.html"><img src="MOINS.png" alt="minus sign">Roku</a>
+        <a href="collection.html"><img src="MOINS.png" alt="minus sign">Nana</a>
+      </div>
+      <a href="myaccount.html"><img src="PLUS.png" alt="plus sign">About</a>
+      <a href="#" style="font-weight:bold"><img src="PLUS.png" alt="plus sign">Let's Play Doll</a>
     </div>
-    <a href="myaccount.html">About</a>
-    <a href="#" style="font-weight:bold">Let's Play Doll</a>
   </div>
-
-  <div class="article">
-    <img src="Botte-1.png" width="auto" height="450px "alt="botte1">
-  </div>
-
-<button type="button" name="panier" onclick="window.location.href = 'panier.html';" class="panier">Panier en 3D</button>
-
+<button type="button" name="panier" onclick="window.location.href = 'panier.html';" class="panier"></button>
+<script type="text/javascript" src="script.js"></script>
   </body>
 </html>
